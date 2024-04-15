@@ -10,7 +10,7 @@ To use it, follow these instructions
 4. Update constant variables in `Converter.java`
 5. Run `mvn compile` & `mvn exec:java`
 
-Once you have the list of blocks, you can import them to Voxelize through the front-end. To do this, it's important to convert the blocks' type and meta information into Voxelize blocks. Here is an example function to do so:
+Once you have the list of blocks, you can import them to Voxelize through the front-end. To do this, it's important to convert the blocks' type and meta information into Voxelize blocks. This can be done by creating a list of `BlockUpdate`. Here is an example function to do so:
 
 ```typescript
 const processBlocks = (update: {
@@ -116,7 +116,7 @@ Some notes on this implementation
   - The way I setup my registry already mimics this encoding, so I just make sure the meta is within the correct range
 - For the rest of the blocks, I just ignore the meta information
 
-Once your process each block to match your registry, you can import the map on the front-end like so
+Once you process each block to match your registry, you can import the map on the front-end like so
 
 ```typescript
 const chunkSize = Math.ceil(updatedWorldMap.length / 10);
@@ -128,3 +128,5 @@ console.log("Map Loaded!");
 ```
 
 where `updatedWorldMap` is of type `BlockUpdate[]`. Note that I divide it up into chunks because loading all blocks at once can cause your computer to freeze.
+
+The final goal of this tool is to be able to upload MC map on Voxelize web and have it be imported automatically with some configurations. To do this end, I've made a TODO list:
