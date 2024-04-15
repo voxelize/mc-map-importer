@@ -4,7 +4,7 @@ This is a tool built from [Enklume](https://github.com/Hugobros3/Enklume) to imp
 
 To use it, follow these instructions
 
-1. Install Java/JDK & Maven
+1. Install Java/JDK, Maven & Gradle
 2. Pull the [Enklume](https://github.com/Hugobros3/Enklume) repo and run `./gradlew publishToMavenLocal`
 3. Pull this repo
 4. Update constant variables in `Converter.java`
