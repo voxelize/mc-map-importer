@@ -129,4 +129,4 @@ console.log("Map Loaded!");
 
 where `updatedWorldMap` is of type `BlockUpdate[]`. Note that I divide it up into chunks because loading all blocks at once can cause your computer to freeze.
 
-The final goal of this tool is to be able to upload MC map on Voxelize web and have it be imported automatically with some configurations. To do this end, I've made a TODO list:
+The final goal of this tool is to be able to upload MC map on Voxelize web and have it be imported automatically with some configurations.
