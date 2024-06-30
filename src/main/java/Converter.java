@@ -13,14 +13,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class Converter {
-    public static final int START_X = -54;
-    public static final int END_X = 54;
-    public static final int START_Y = 23;
-    public static final int END_Y = 85;
-    public static final int START_Z = -54;
-    public static final int END_Z = 54;
+    public static final int START_X = -36;
+    public static final int END_X = 36;
+    public static final int START_Y = 15;
+    public static final int END_Y = 31;
+    public static final int START_Z = -36;
+    public static final int END_Z = 36;
 
-    public static final String INPUT_FOLDER = System.getProperty("user.home") + "/Desktop/lobby";
+    public static final String INPUT_FOLDER = System.getProperty("user.home") + "/Desktop/KnockIt1";
     public static final String OUTPUT_FILE = System.getProperty("user.home") + "/Projects/temp/map.json";
 
     public static void main(String[] args) {
@@ -51,11 +51,13 @@ public class Converter {
                             regions.put(regionX + "." + regionZ, mcRegion);
                         }
 
+                        // Modulus for negative numbers
                         int relChunkX = (chunkX % 32 + 32) % 32;
                         int relChunkZ = (chunkZ % 32 + 32) % 32;
 
                         mcChunk = mcRegion.getChunk(relChunkX, relChunkZ);
 
+                        // Modulus for negative numbers
                         int relX = (x % 16 + 16) % 16;
                         int relZ = (z % 16 + 16) % 16;
 
